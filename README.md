@@ -1,2 +1,2 @@
 # learnPython
-learning to code in python 
+This is me learning how to python from ###FreeCodeCamp and trying out ##GIT
