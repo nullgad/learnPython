@@ -1,33 +1,43 @@
 import re
 
+print("\n /$$$$$$$\\  /$$   /$$  /$$$$$$  /$$   /$$ /$$$$$$$$        /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$")
+print("| $$__  $$ | $$  | $$ /$$__  $$| $$$ | $$| $$_____/       /$$__ $$  /$$__  $$| $$__  $$| $$_____/")
+print("| $$   \\$$ | $$  | $$| $$  \\ $$| $$$$| $$| $$            | $$  \\__/| $$  \\ $$| $$  \\ $$| $$")      
+print("| $$$$$$$ /| $$$$$$$$| $$  | $$| $$ $$ $$| $$$$$         | $$      | $$  | $$| $$  | $$| $$$$$")   
+print("| $$\\____/ | $$ \\__$$| $$  | $$| $$  $$$$| $$\\_//        | $$      | $$  | $$| $$  | $$| $$__/")   
+print("| $$       | $$  | $$| $$  | $$| $$\\ $$$ | $$            | $$    $$| $$  | $$| $$  | $$| $$ ")     
+print("| $$       | $$  | $$|  $$$$$$/| $$ \\ $$ | $$$$$$$$      |  $$$$$$/|  $$$$$$/| $$$$$$$/| $$$$$$$$")
+print("|__/       |__/  |__/ \\______/ |__/  \\__/|________/       \\______/  \\______/ |_______/ |________/\n")
+
+print("\n\n\n============================================================\n..........................NULLG4D..........................\n============================================================\n\n\n\nThis is a small project by me on the way to learn python! \n Essentially this is just a program to change normal text to phone code and back")
 
 encoderTable={
-    "a":"2, ",
-    "b":"22, ",
-    "c":"222, ",
-    "d":"3, ",
-    "e":"33, ",
-    "f":"333, ",
-    "g":"4, ",
-    "h":"44, ",
-    "i":"444, ",
-    "j":"5, ",
-    "k":"55, ",
-    "l":"555, ",
-    "m":"6, ",
-    "n":"66, ",
-    "o":"666, ",
-    "p":"7, ",
-    "q":"77, ",
-    "r":"777, ",
-    "s":"7777, ",
-    "t":"8, ",
-    "u":"88, ",
-    "v":"888, ",
-    "w":"9, ",
-    "x":"99, ",
-    "y":"999, ",
-    "z":"9999, "
+    "a":"2,",
+    "b":"22,",
+    "c":"222,",
+    "d":"3,",
+    "e":"33,",
+    "f":"333,",
+    "g":"4,",
+    "h":"44,",
+    "i":"444,",
+    "j":"5,",
+    "k":"55,",
+    "l":"555,",
+    "m":"6,",
+    "n":"66,",
+    "o":"666,",
+    "p":"7,",
+    "q":"77,",
+    "r":"777,",
+    "s":"7777,",
+    "t":"8,",
+    "u":"88,",
+    "v":"888,",
+    "w":"9,",
+    "x":"99,",
+    "y":"999,",
+    "z":"9999,"
 
 }
 
@@ -64,7 +74,7 @@ decoderTable={
 ##prompt
 
 
-print("1: ENCODE \n")
+print("\n\n\n\n1: ENCODE \n")
 print("2: DECODE \n")
     
 
@@ -74,7 +84,7 @@ print("2: DECODE \n")
 e=input("Select a number : ")
 
 if e is "1" :
-    en=input("Input the text to encode : \n ")
+    en=input("\n\nInput the text to encode :  ")
         #lower or upper check 
 
     '''if en.islower() is False:
@@ -82,8 +92,7 @@ if e is "1" :
     else :
        ene = en'''
 elif e is "2":
-    #print("decoder is mot working yet")
-    de=input("\nInput the code to decode : \n ")
+    de=input("\nInput the code to decode :  ")
 else:
     print("\n\n++++++++++++++++++++++++++++++\nMake a Selection\n++++++++++++++++++++++++++++++")
 
@@ -154,77 +163,72 @@ def encode(a):
     return encd
 
 
+
+
 #decoder function 
 
 def decode(b):
     dec=""
-    space=""
-    print("\n Your decoded valu is : ")
-    '''for letter in b:
-        if letter is " ":
-            space=space+""
-        else:
-            space=space + letter'''
+    space=""    
     #print(space)
     #print(re.split(",",space))
+    print("\n Your decoded valu is : \n") 
     for index in re.split(",",de):
         index = "'"+index+"'"
         #print(index)
-        if "' 2'" in index :
+        if "'2'" in index :
             dec=dec +  decoderTable.get("2")
-        if  "'2'" in index :
-            dec=dec +  decoderTable.get("2")
-        elif "' 22'" in index :
+        elif ("'22'" or "'22'") in index :
             dec= dec + decoderTable.get("22")
-        elif "' 222'" in index :
+        elif "'222'" in index :
             dec= dec + decoderTable.get("222")
-        elif "' 3'" in index :
+        elif "'3'" in index :
             dec= dec + decoderTable.get("3")
-        elif "' 33'" in index :
+        elif "'33'" in index :
             dec= dec + decoderTable.get("33")             
-        elif "' 333'" in index :
+        elif "'333'" in index :
             dec= dec + decoderTable.get("333") 
-        elif "' 4'" in index :
+        elif "'4'" in index :
             dec= dec + decoderTable.get("4") 
-        elif "' 44'" in index :
+        elif "'44'" in index :
             dec= dec + decoderTable.get("44") 
-        elif "' 444'" in index :
+        elif "'444'" in index :
             dec= dec + decoderTable.get("444") 
-        elif "' 5'" in index :
+        elif "'5'" in index :
             dec= dec + decoderTable.get("5") 
-        elif "' 55'" in index :
+        elif "'55'" in index :
             dec= dec + decoderTable.get("55") 
-        elif "' 555'" in index :
+        elif "'555'" in index :
             dec= dec + decoderTable.get("555") 
-        elif "' 6'" in index :
+        elif "'6'" in index :
             dec= dec + decoderTable.get("6") 
-        elif "' 66'" in index :
+        elif "'66'" in index :
             dec= dec + decoderTable.get("66") 
-        elif "' 666'" in index :
+        elif "'666'" in index :
             dec= dec + decoderTable.get("666") 
-        elif "' 7'" in index :
+        elif "'7'" in index :
             dec= dec + decoderTable.get("7") 
-        elif "' 77'" in index :
+        elif "'77'" in index :
             dec= dec + decoderTable.get("77") 
-        elif "' 777'" in index :
+        elif "'777'" in index :
             dec= dec + decoderTable.get("777") 
-        elif "' 7777'" in index :
+        elif "'7777'" in index :
             dec= dec + decoderTable.get("7777") 
-        elif "' 8'" in index :
+        elif "'8'" in index :
             dec= dec + decoderTable.get("8") 
-        elif "' 88'" in index :
+        elif "'88'" in index :
             dec= dec + decoderTable.get("88") 
-        elif "' 888'" in index :
+        elif "'888'" in index :
             dec= dec + decoderTable.get("888") 
-        elif "' 9'" in index :
+        elif "'9'" in index :
             dec= dec + decoderTable.get("9") 
-        elif "' 99'" in index :
+        elif "'99'" in index :
             dec= dec + decoderTable.get("99") 
-        elif "' 999'" in index :
+        elif "'999'" in index :
             dec= dec + decoderTable.get("999") 
-        elif "' 9999'" in index :
+        elif "'9999'" in index :
             dec= dec + decoderTable.get("9999")     
-        elif "' 0'" in index :
+        elif "'0'" in index :
             dec= dec + " "
         else :
             dec = dec 
@@ -232,7 +236,8 @@ def decode(b):
                 if character is " ":
                     space = space + ""
                 else:
-                    space = dec   
+                    space = dec
+          
     return space
 
 
@@ -241,5 +246,6 @@ def decode(b):
 
 if e is "1" :
     print(encode(en))
-elif e is "2" :
+elif e is "2": 
     print(decode(de))
+
