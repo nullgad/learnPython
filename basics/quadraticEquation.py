@@ -2,7 +2,7 @@
 #the equation is (-b+sqrt((sqr(b)-4*a*c)))/2a and (-b-sqrt((sqr(b)-4*a*c)))/2a
 # 
 import math
-print("Simple Calculatr to find the Root of a Quadatic Eqution!..\n\n\n")
+print("\n\n\nSimple Calculatr to find the Root of a Quadatic Eqution!..\n\n\n")
 print("The Quadratic equation is (ax^2)+bx+c where a not= 0\n\n\n")
 
 a=int(input("Enter the value of a :  "))
@@ -21,7 +21,7 @@ if a!= 0:
     if det == 0 :
         root1=-b/(2*a)
         print("the root -b/(2a)= " + str(root1))
-    
+        
 
     elif det > 0:
         root2=((-b-(math.sqrt(det)))/(2*a))
